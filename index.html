@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang='en'>
+  <head>
+    <title>Medical Imaging Use in U.S. Hospitals</title>
+    <meta charset="utf-8">
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Niramit" rel="stylesheet">
+    <link rel="stylesheet" href="main.css">
+  </head>
+
+  <body>
+    <section class="title">
+        <h1>Medical Imaging Use in U.S. Hospitals</h1>
+        <hr>
+        <h2>Preface</h2>
+        <p>This data set was chosen in order to see if there was any correlation between the frequency of medical imaging use and the average cardiac calcium score in that state. Cardiac calcium score is a metric used for CT scans via seeing plaque build up in the coronary arteries. Higher score means an increased risk of a patient developing CAD (Coronary Artery Disease), which is not good.</p>
+        <hr>
+    </section>
+    <div id="tooltip" class="hidden">
+        <p id="state"><span></span></p>
+        <p id="count"><span></span></p>
+        <p id="score"><span></span></p>
+    </div>
+    <!-- add your HTML here -->
+    <section class="chartContainer">
+        <h2>Imaging usage data vs. Average cardiac calcium score</h2>
+        <p>The data set shows that there is no clear correlation between the amount of imaging usage and the average cardiac calcium score of patients. Aside from some extremly low use case locations having very low scores, most states range in the 5-11 range, which is around a 10% chance of developing CAD. Anything from 11 and above is a moderate risk, and the few that go past 10 for average cardiac calcium level are around the lower half of usage in medical imaging, but nothing concrete can be gained from that. </p>
+        <svg id='chart1'></svg>
+        <br><hr>
+    </section>
+    <section class="chartContainer">
+        <h2>Medical imaging usage data per state</h2>
+        <p>This provides an ordered visualization of all of the states and their usage of medical imaging data. Understandibly, larger, more populated states tend to have a significantly higher usage of medical imaging due to the large amount of people. The states with the highest usage of medical data are decidedly middle of the road in terms of cardiac calcium score, so the usage of medical imaging does not seem to have any relation to overall heart health in the state.</p>
+        <svg id='chart2'></svg>
+        <br><hr>
+    </section>
+    <section class="chartContainer">
+        <h2>Number of excluded cases per state</h2>
+        <p>The data initially contained a large amount of cases that lacked cardiac calcium scores due to reasons such as availability issues, too few cases to report, or perceived data discrepancies. For most of the states, around half of the reported cases in the database lacked scores due to these reasons, so there is a large amount of room for data obfuscation.</p>
+        <svg id='chart3'></svg>
+        <br><hr>
+    </section>
+    <section class="chartContainer">
+        <h2>Average cardiac calcium score per imaging type</h2>
+        <p>The data also reported the specific type of imaging used in each case. Surprisingly, imaging of the spine area tended to yield patients with the highest average cardiac calcium score as opposed to anywhere else like the abdomen. This seems odd, as the use case for a lumbar MRI is to check for back related injuries like sclerosis or spinal cancer, which would not have much to do with calcium in the cardiac artery.</p>
+        <svg id='chart4'></svg>
+        <br><hr>
+    </section>
+    <section class="conclusion">
+        <h2>Conclusion</h2>
+        <p>There ultimately was not much of a correlation between usage of medical imaging and the state's perceived average cardiac calcium score. A large part of my curiousity regarding this data would have come from a marked difference in imaging types per state, but the unforseen standardization of the imaging types threw a wrench in my plans. But, we can safely say that a larger need for medical usage does not correlate to an increased tendency for the state to have a higher risk of heart problems. The only correlation that was found is that more populated states have more uses of medical imaging, which makes sense as there are more people who may need this technology.</p>
+    </section>
+    <script src='./main.js'></script>
+  </body>
+</html>

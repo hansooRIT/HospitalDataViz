@@ -1,0 +1,44 @@
+/* MAIN CSS FILE FOR PROJECT */
+
+
+h1, h2, p, span, svg {
+    font-family: "Niramit";
+}
+
+.title h1 {
+    text-align: center;
+}
+
+.bar {
+    stroke: black;
+    stroke-width: 1px;
+}
+
+#tooltip {
+    position: absolute;
+    background-color: white;
+    width: 200px;
+    height; auto;
+    padding: 10px;
+    border-style: solid;
+    border-color: black;
+    border-width: 2px;
+    border-radius: 5px;
+}
+
+#tooltip.hidden {
+    display: none;
+}
+
+.chartContainer {
+    display: inline;
+    width: 1100px;
+    float: none;
+    clear: none;
+}
+
+.chartContainer p {
+    width: 800px;
+    float: right;
+    text-align: left;
+}
